@@ -1,0 +1,34 @@
+
+<br/>
+<div ng-show="favMovie">
+    <div class="row">
+        <div class="col-md-3">
+            <h3>{{ favMovie.name}}</h3>
+            <span data-ng-repeat="i in getCount(favMovie.rating) track by $index" class="glyphicon glyphicon-star"></span>
+        </div>
+        <div class="col-md-1 col-md-offset-8">
+            <button type="submit" ng-click="back()" class="btn btn-success btn-lg btn-block">
+                 Back
+            </button>
+        </div>
+
+
+
+
+ 
+    </div>
+
+
+
+    <br/><br/><br/>
+    <div class="row">
+        <div class="col-md-4">
+            <img data-ng-src="{{ favMovie.thumb}}" class="movieThumb">
+        </div>
+        <div class="col-md-6">
+            <h4>Review</h4>
+            <label>{{ favMovie.review}}</label>
+        </div>
+    </div>
+     <a data-ng-href="#/bookTickets/{{currMovie.id}}" class="btn btn-success pull-left" role="button" data-ng-disabled="movie.availability == 0">Book</a>
+</div>

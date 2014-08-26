@@ -1,0 +1,88 @@
+<br/>
+<div class="row">
+     <div class="col-md-3 col-xs-12"><h4 >Search for a job here:</h4></div>
+     
+     <div class="col-md-5 col-sm-5 col-xs-12"><input class="form-control" placeholder="Enter your favorite movie" data-ng-model="search" />    
+     </div>
+</div>
+<hr />
+    
+
+  <div class="row">
+    
+       <section class="col-sm-12 col-md-6"  data-ng-repeat="movie in movies | orderBy:'id' | filter:search">
+       
+        
+        
+       
+        <a ng-href="#/job/{{movie._id}}"><h4> {{movie.title}}</h4></a>
+        <u>{{movie.company}}</u>
+        <small> {{movie.location}}</small>
+        <p>Date Posted: {{movie.date}}</p>
+       
+           
+
+       </section>
+        <!--<div class="thumbnail">
+            <a ng-href="#/movie/{{movie.id}} "><img src={{movie.thumb}}  class="thumb-big"/></a>
+            <div class="caption">
+              <h3> {{movie.name}} </h3>
+              <p>...</p>
+              <p>
+                  <span class="label label-warning availability">Availability ({{movie.availability}})</span>
+                  <a ng-href="#/movie/{{movie.id}} " class="btn btn-primary" role="button">Review</a>
+                  <a data-ng-href="#/bookTickets/{{movie.id}}" class="btn btn-success " role="button" data-ng-disabled="movie.availability == 0">Book »</a>
+              </p>
+            </div>
+        </div>-->
+  </div>
+
+
+
+
+
+
+    <!--<div data-ng-show="favMovie.availability" class="alert alert-info alert-dismissible homeAlert" role="alert">
+      <button type="button" class="close" data-dismiss="alert"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+      <strong><span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star"></span>You choose {{favMovie.name}}!</strong> 
+      <p> {{favMovie.review}}:</p>
+    </div>-->
+
+
+
+   
+
+    <!--
+    <div data-ng-show="favMovie.availability">
+        <h1>Availability {{favMovie.availability}}:</h1>
+        <h2>Review:</h2>
+        <p> {{favMovie.review}}:</p>
+    </div>
+    <ul>
+        <li data-ng-repeat="movie in movies | orderBy:'id' | filter:search" class="col-xs-4">
+            {{movie.id}} - {{movie.name}} - {{movie.rating}}
+            <a href="javascript:" data-ng-click="getMovieById(movie.id)"><img src={{movie.thumb}} / ></a>
+            <a ng-href="#/movie/{{movie.id}} " class="btn btn-primary ">Review</a>
+
+        </li>
+    </ul>-->
+
+    <!--
+    <div class="row">
+      <div class="col-sm-6 col-md-4"  data-ng-repeat="movie in movies | orderBy:'id' | filter:search">
+        <div class="thumbnail">
+          <a ng-href="#/movie/{{movie.id}} "><img src={{movie.thumb}}  class="thumb-big"/></a>
+          <div class="caption">
+            <h3> {{movie.name}} </h3>
+            <p>...</p>
+            <p>
+                <span class="label label-warning availability">Availability ({{movie.availability}})</span>
+                <a ng-href="#/movie/{{movie.id}} " class="btn btn-primary" role="button">Review</a>
+                <a data-ng-href="#/bookTickets/{{movie.id}}" class="btn btn-success " role="button" data-ng-disabled="movie.availability == 0">Book »</a>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>-->
+
+

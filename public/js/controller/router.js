@@ -1,0 +1,24 @@
+movieStubApp.config(function($routeProvider){
+    $routeProvider
+    .when('/',{
+      templateUrl:'tmpl/home.html',
+      controller:'movieStubController'  
+    }).when('/job/:id',{
+      templateUrl:'tmpl/job.html',
+      controller:'jobDetailsController'    
+    }).when('/movie/:id',{
+      templateUrl:'tmpl/movie.html',
+      controller:'movieDetailsController'    
+    }).when('/bookTickets/:id',{
+      templateUrl:'tmpl/booktickets.html',
+      controller:'bookTicketsController'   
+    }).when('/bookings',{
+      templateUrl:'tmpl/bookings.html',
+      controller:'bookingDetailsController'     
+    }).when('/addContent',{
+      templateUrl:'tmpl/addContent.html',
+      controller:'addContentController'     
+    }).otherwise({
+        redirectoTo:'/'
+    });
+});
